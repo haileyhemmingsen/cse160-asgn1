@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Change a point color</title>
+  </head>
+
+  <body onload="main()">
+    <canvas id="webgl" width="400" height="400">
+    Please use a browser that supports "canvas"
+    </canvas>
+
+    <img src="triangleCat.png" width="300">
+
+    <p id="numDot"> XXX </p>
+
+    <p>
+    <button type="button" id="green">Green</button>
+    <button type="button" id="red">Red</button>
+    <button type="button" id="clearButton">Clear</button>
+    <button type="button" id="eraserButton">Eraser</button>
+    <button type="button" id="undoButton">Undo</button>
+    
+
+    <p>
+    <button type="button" id="pointButton">Point</button>
+    <button type="button" id="triangleButton">Triangle</button>
+    <button type="button" id="circleButton">Circle</button>
+    <button type="button" id="imgButton">Draw Image</button>
+
+
+    <p>
+    Red <Input type="range" min="0" max="100" value="100" class="slider" id="redSlider">
+    Green <Input type="range" min="0" max="100" value="0" class="slider" id="greenSlider">
+    Blue <Input type="range" min="0" max="100" value="0" class="slider" id="blueSlider">
+    <p>
+    
+    
+    <p>
+        <button type="button" id="saveColor"> Save Color </button>
+    <p>
+
+    Size <Input type="range" min="5" max="40" value="0" class="slider" id="sizeSlider">
+    (Circle) Segments <Input type="range" min="5" max="100" value="10" class="slider" id="circleSlider">
+    <p>
+
+    <p>
+    Palette: 
+    <button type="button" id="palette1" style="background-color:gray; color: gray"> color </button>
+    <p>
+
+    Canvas: 
+    <button type="button" id="canvasColor1" style="background-color:white; color: white"> color </button>
+    <button type="button" id="canvasColor2" style="background-color:gray; color: gray"> color </button>
+    <button type="button" id="canvasColor3" style="background-color:black; color: black"> color </button>
+    <button type="button" id="canvasColor4" style="background-color: lightskyblue; color: lightskyblue"> color </button>
+    
+    <p>
+        Awesomeness points:
+    </p>    
+    <p>
+        Eraser button, Undo button, palette for saved color, and change canvas color!
+    </p> 
+
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="Circle.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="Point.js"></script>
+    <script src="ColoredPoints.js"></script>
+  </body>
+</html>
