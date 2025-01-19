@@ -193,7 +193,7 @@ function drawImg(vertices) {
     gl.drawArrays(gl.TRIANGLES, 0, n);
 }
 
-let canvasColor;
+let canvasColor = [0.0, 0.0, 0.0];
 function updateCanvasColor() {
     gl.clearColor(canvasColor[0], canvasColor[1], canvasColor[2], 1.0); 
     gl.clear(gl.COLOR_BUFFER_BIT);
@@ -210,7 +210,7 @@ function main() {
     canvas.onmousemove = function(ev) {if(ev.buttons == 1) { click(ev) }};
 
     // Specify the color for clearing <canvas>
-    gl.clearColor(0, 0, 0, 1.0);
+    gl.clearColor(canvasColor[0], canvasColor[1], canvasColor[2], 1.0);
 
     // Clear <canvas>
     gl.clear(gl.COLOR_BUFFER_BIT);
